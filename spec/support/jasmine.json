@@ -1,0 +1,11 @@
+{
+  "spec_dir": "spec",
+  "spec_files": [
+    "04_data_structure_spec/sumOfRangeSpec.js"
+  ],
+  "helpers": [
+    "helpers/**/*.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false
+}
