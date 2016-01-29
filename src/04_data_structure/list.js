@@ -14,6 +14,9 @@ var List = {
       array = [];
     }
     array.push(list.value);
+
+    // if can be replaced by the following conditional operator
+    // return list.rest != null ? List.listToArray(list.rest, array) : array;
     if(list.rest != null) { List.listToArray(list.rest, array); }
     return array;
   },
