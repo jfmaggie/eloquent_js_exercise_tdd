@@ -2,10 +2,6 @@ describe("A list", function() {
   var listObj = require('../../src/04_data_structure/list');
   var stringify = require('json-stable-stringify');
 
-  beforeEach(function() {
-    listObj.arr = [];
-  });
-
   it("A function 'arrayToList' takes an array and return a list ", function() {
     var list = {
       value: 10,
