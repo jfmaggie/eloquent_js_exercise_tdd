@@ -1,5 +1,4 @@
 var List = {
-  arr: [],
   arrayToList: function(arr) {
     var newList = {};
     for (var i = (arr.length - 1); i >= 0; i--) {
@@ -10,13 +9,19 @@ var List = {
     }
     return newList;
   },
-  listToArray: function(list) {
-    List.arr.push(list.value);
-    if (list.rest != null) { List.listToArray(list.rest); }
-    return List.arr;
+  listToArray: function(list, array) {
+    if (array == null || typeof(array) == undefined) {
+      array = [];
+    }
+    array.push(list.value);
+
+    // if can be replaced by the following conditional operator
+    // return list.rest != null ? List.listToArray(list.rest, array) : array;
+    if(list.rest != null) { List.listToArray(list.rest, array); }
+    return array;
   },
   prepend: function(element, list) {
-    return {"value": element, "rest": list};
+    return { value: element, rest: list };
   },
   nth: function(list, n) {
     arr = List.listToArray(list);

@@ -16,8 +16,8 @@ var sumOfRange = {
     return rangeArray;
   },
   sum: function(arrayNum) {
-    return arrayNum.reduce(function(pre, cur) {
-      return pre + cur;
+    return arrayNum.reduce(function(previous, current) {
+      return previous + current;
     },0);
   }
 };

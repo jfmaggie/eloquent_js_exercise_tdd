@@ -1,10 +1,5 @@
 describe("A list", function() {
   var listObj = require('../../src/04_data_structure/list');
-  var stringify = require('json-stable-stringify');
-
-  beforeEach(function() {
-    listObj.arr = [];
-  });
 
   it("A function 'arrayToList' takes an array and return a list ", function() {
     var list = {
@@ -14,7 +9,7 @@ describe("A list", function() {
         rest: null
       }
     };
-    expect(stringify(listObj.arrayToList([10, 20]))).toBe(stringify(list));
+    expect(listObj.arrayToList([10, 20])).toEqual(list);
   });
 
   it("A function 'listToArray' produces an array from list", function() {
@@ -24,14 +19,14 @@ describe("A list", function() {
 
   it("Helper function 'prepend' takes an element and a list and returns\
   new list with element prepended", function() {
-    expect(stringify(listObj.prepend(10, null))).toBe(stringify({value: 10, rest: null}));
-    expect(stringify(listObj.prepend(10, listObj.prepend(20, null)))).toBe(stringify({
+    expect(listObj.prepend(10, null)).toEqual({value: 10, rest: null});
+    expect(listObj.prepend(10, listObj.prepend(20, null))).toEqual({
       value: 10,
       rest: {
         value: 20,
         rest: null
       }
-    }));
+    });
   });
 
   it("Function 'nth' returns the element at the given position in the list", function() {
