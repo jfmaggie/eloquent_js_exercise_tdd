@@ -4,7 +4,8 @@
     "04_data_structure_spec/sumOfRangeSpec.js",
     "04_data_structure_spec/reverseArraySpec.js",
     "04_data_structure_spec/listSpec.js",
-    "04_data_structure_spec/deepCompareSpec.js"
+    "04_data_structure_spec/deepCompareSpec.js",
+    "05_higher_order_spec/flatteningSpec.js"
   ],
   "helpers": [
     "helpers/**/*.js"
