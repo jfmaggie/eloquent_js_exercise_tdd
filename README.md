@@ -2,8 +2,8 @@
 Exercises for the book Eloquent JavaScrip using TDD
 
 ## Installation
-- npm install -g jasmine
-- npm install json-stable-stringify
+ npm install -g jasmine
+
 
 ## Usage
 jasmine
